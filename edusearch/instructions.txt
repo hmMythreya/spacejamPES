@@ -1,0 +1,4 @@
+run manage.py that is inside the UniFinder folder with 
+"runserver" as an argument:
+
+--> python manage.py runserver 
