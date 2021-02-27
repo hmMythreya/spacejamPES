@@ -1,5 +1,5 @@
 # instructions
-# git clone git@github.com//hmMythreya/spacejamPES.git
+# git clone git@github.com/hmMythreya/spacejamPES.git
 # cd edusearch
 # cd UniFinder
 # python manage.py runserver
