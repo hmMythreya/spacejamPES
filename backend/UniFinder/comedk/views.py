@@ -16,7 +16,7 @@ def checkCollegeCSE(request):
             collageList.append(x)
     if(collageList):
         return render(request,"Result.html",{"result":collageList})
-    return render(request,"Result.html",{"result":"No colleges found"})
+    return render(request,"NoResult.html",{"result":"No colleges found","course":"CSE"})
 
 def checkCollegeECE(request):
     collageList = []
@@ -25,4 +25,4 @@ def checkCollegeECE(request):
             collageList.append(x)
     if(collageList):
         return render(request,"Result.html",{"result":collageList})
-    return render(request,"NoResult.html",{"result":"No colleges found"})
+    return render(request,"NoResult.html",{"result":"No colleges found","course":"ECE"})

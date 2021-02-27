@@ -2,22 +2,53 @@
 <html>
 <head>
 <style>
-table, th, td {
-  border: 1px solid black;
+.styled-table {
+    border-collapse: collapse;
+    margin: 50px;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #e4fbff;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }
 </style>
 </head>
-<body style="background-color: #b6f5f5">
-
-<table> 
-    {% for i in result%}
-    
+<body style="background-color: #c9fad9">
+<h1 style = "color: #009879 ;">List of recommended universities for {{course}}:</h1>
+<table class="styled-table">
     <tr>
-        <td>{{i}}<td>
+        <td> </td>
+        <td>University</td>
+    </tr> 
+    {% for i in result%}
+    <tr>
+        <td width = 20px>{{forloop.counter}}</td>
+        <td>{{i}}</td>
     </tr>
-    
     {% endfor %}
 </table>
-
 </body>
 </html>

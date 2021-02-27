@@ -19,7 +19,7 @@ def checkCollegeCSE(request):
         if int(request.GET["rank"]) <= collegeDict[x][0]:
             collageList.append(x)
     if(collageList):
-        return render(request,"Result.html",{"result":collageList})
+        return render(request,"Result.html",{"result":collageList,"course":"CSE"})
     return render(request,"NoResult.html",{"result":"No colleges found"})
 
 def checkCollegeEEE(request):
@@ -28,5 +28,5 @@ def checkCollegeEEE(request):
         if int(request.GET["rank"]) <= collegeDict[x][1]:
             collageList.append(x)
     if(collageList):
-        return render(request,"Result.html",{"result":collageList})
+        return render(request,"Result.html",{"result":collageList,"course":"EEE"})
     return render(request,"NoResult.html",{"result":"No colleges found"})
