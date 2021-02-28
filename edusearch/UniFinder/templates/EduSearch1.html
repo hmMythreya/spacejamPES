@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">EduSearch</a>
+            <a class="navbar-brand" href="">EduSearch</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,25 +28,26 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./about">About</a>
+                        <a class="nav-link" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./kcet">KCET</a>
+                        <a class="nav-link" href="/kcet">KCET</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./comedk">COMEDK</a>
+                        <a class="nav-link" href="/comedk">COMEDK</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./jeemains">JEE Mains</a>
+                        <a class="nav-link" href="/jeemains">JEE Mains</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./jeeadvanced">JEE Advanced</a>
+                        <a class="nav-link" href="/jeeadvanced">JEE Advanced</a>
                     </li>
 
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" action="" name="page">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        id='college' name="page">
+                    <button class="btn btn-outline-success" type="submit" formaction="search">Search</button>
                 </form>
             </div>
         </div>
@@ -55,20 +56,16 @@
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                   
-                        <img src="https://www.reachivy.com/wp-content/uploads/2017/03/Indian-Market-Blog.jpg" class="d-block w-100"
+                    <img src="https://source.unsplash.com/1400x900/?IIT,competition-exams" class="d-block w-100"
                         alt="...">
                 </div>
                 <div class="carousel-item">
-                    
-                        <img src="https://cache.careers360.mobi/media/presets/860X430/presets/860X430/article_images/2020/3/27/JEE-Main-Exam-Centres-2020-in-Bangalore.webp" class="d-block w-100"
+                    <img src="https://source.unsplash.com/1400x900/?PES,competition-exams" class="d-block w-100"
                         alt="...">
                 </div>
                 <div class="carousel-item">
-                     <img src="https://cdn.discordapp.com/attachments/815108613776998402/815325513148137512/a.jpg" class="d-block w-100"
+                    <img src="https://source.unsplash.com/1400x900/?COMEDK,competition-exams" class="d-block w-100"
                         alt="...">
-
-                    
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -83,7 +80,31 @@
             </button>
         </div>
     </div>
+    <script>
 
+        function openPage() {
+            var x = document.getElementById('college').value;
+            if (x === 'rv') {
+                document.location.href='./rvce';
+            }
+
+            if (x === 'pes') {
+                document.location.href = "./pes";
+            }
+
+            if (x === 'msrit') {
+                document.location.href = './msrit';
+            }
+
+            if (x === 'bms') {
+                document.location.href = "./bms";
+            }
+        }
+
+
+
+
+    </script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
