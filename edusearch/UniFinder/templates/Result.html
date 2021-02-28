@@ -1,54 +1,29 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-.styled-table {
-    border-collapse: collapse;
-    margin: 50px;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.styled-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-}
-.styled-table th,
-.styled-table td {
-    padding: 12px 15px;
-}
-.styled-table tbody tr {
-    border-bottom: 1px solid #f3f3f3;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #e4fbff;
-}
-
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-.styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-</style>
+  <title>RESULTS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body style="background-color: #c9fad9">
-<h1 style = "color: #009879 ;">List of recommended universities for {{course}}:</h1>
-<table class="styled-table">
-    <tr>
-        <td> </td>
-        <td>University</td>
-    </tr> 
-    {% for i in result%}
-    <tr>
-        <td width = 20px>{{forloop.counter}}</td>
-        <td>{{i}}</td>
-    </tr>
-    {% endfor %}
-</table>
+<body>
+
+<div class="container-fluid">
+  <h1></h1>
+  <p></p>
+  <p></p>
+  <div>
+    <div class="col-sm-4" style="background-color: lightgrey;" style="font-family: "Courier New">No.</div>
+    <div class="col-sm-8" style="background-color: lightblue;" "font-family: "Courier New">COLLEGE</div>
+    {%for i in result%}
+    <div class="col-sm-4" style="background-color:lightgrey;" "font-family: "Courier New">{{forloop.counter}}</div>
+    <div class="col-sm-8" style="background-color:lightblue;" "font-family: "Courier New" >{{i}}</div>
+    {%endfor%}
+   </div>
+  
+</div>
+    
 </body>
 </html>

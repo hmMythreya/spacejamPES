@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 from . import views
 
+
+
 urlpatterns = [
     path('',include('home.urls')),
     path('comedk', include('comedk.urls')),
@@ -27,5 +29,7 @@ urlpatterns = [
     path("bms",views.bms),
     path("pes",views.pes),
     path("rvce",views.rvce),
-    path("msrit",views.msrit)
+    path("msrit",views.msrit),
+    path("about",views.about),
+    path("search",include('search.urls'))
 ]

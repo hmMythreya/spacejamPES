@@ -8,3 +8,5 @@ def msrit(request):
         return render(request,"msrit.html")
 def pes(request):
         return render(request,"pes.html")
+def about(request):
+        return render(request, "about.html")
